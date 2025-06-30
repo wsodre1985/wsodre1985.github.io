@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
     // 1. Definição das Atividades, Estrutura de Dados e Recompensas
-    // Agora, a estrutura inclui os filhos, contador de estrelas e histórico de resgates.
+    // Removida a atividade "Passear com a Molly" para Heitor.
     // ----------------------------------------------------
 
     let appData = {
         nicolas: {
             goldenStars: 0,
-            redeemHistory: [], // Novo: Histórico de resgates para Nicolas
+            redeemHistory: [],
             activities: {
                 segunda: [
                     { id: 'nicolas-aprender-seg', title: 'Hora de aprender coisas novas', description: 'Estudar e descobrir coisas interessantes!', icon: '📚', completed: false },
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         heitor: {
             goldenStars: 0,
-            redeemHistory: [], // Novo: Histórico de resgates para Heitor
+            redeemHistory: [],
             activities: {
                 segunda: [
                     { id: 'heitor-aprender-seg', title: 'Hora de aprender coisas novas', description: 'Descobrir coisas novas brincando e aprendendo!', icon: '🖍️', completed: false },
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { id: 'heitor-toalhas-roupas-seg', title: 'Toalhas e Roupas no Lugar', description: 'Guardar as roupas e toalhas nos lugares certos!', icon: '🧺', completed: false },
                     { id: 'heitor-quarto-organizado-seg', title: 'Quarto Organizado', description: 'Deixar o quarto limpo e arrumado antes de dormir!', icon: '🛏️', completed: false },
                     { id: 'heitor-harmonia-irmaos-seg', title: 'Harmonia entre Irmãos', description: 'Brincar juntos e resolver conflitos com diálogo!', icon: '❤️', completed: false },
-                    { id: 'heitor-passear-molly-seg', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
+                    // REMOVIDA: { id: 'heitor-passear-molly-seg', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
                     { id: 'heitor-comida-molly-seg', title: 'Dar comida para Molly', description: 'Ajudar a alimentar a Molly com carinho!', icon: '🦴', completed: false },
                     { id: 'heitor-brinquedos-seg', title: 'Organizar os Brinquedos', description: 'Guardar todos os brinquedos no lugar certo!', icon: '🧸', completed: false }
                 ],
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { id: 'heitor-toalhas-roupas-ter', title: 'Toalhas e Roupas no Lugar', description: 'Guardar as roupas e toalhas nos lugares certos!', icon: '🧺', completed: false },
                     { id: 'heitor-quarto-organizado-ter', title: 'Quarto Organizado', description: 'Deixar o quarto limpo e arrumado antes de dormir!', icon: '🛏️', completed: false },
                     { id: 'heitor-harmonia-irmaos-ter', title: 'Harmonia entre Irmãos', description: 'Brincar juntos e resolver conflitos com diálogo!', icon: '❤️', completed: false },
-                    { id: 'heitor-passear-molly-ter', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
+                    // REMOVIDA: { id: 'heitor-passear-molly-ter', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
                     { id: 'heitor-comida-molly-ter', title: 'Dar comida para Molly', description: 'Ajudar a alimentar a Molly com carinho!', icon: '🦴', completed: false },
                     { id: 'heitor-brinquedos-ter', title: 'Organizar os Brinquedos', description: 'Guardar todos os brinquedos no lugar certo!', icon: '🧸', completed: false }
                 ],
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { id: 'heitor-toalhas-roupas-qua', title: 'Toalhas e Roupas no Lugar', description: 'Guardar as roupas e as toalhas nos lugares certos!', icon: '🧺', completed: false },
                     { id: 'heitor-quarto-organizado-qua', title: 'Quarto Organizado', description: 'Deixar o quarto limpo e arrumado antes de dormir!', icon: '🛏️', completed: false },
                     { id: 'heitor-harmonia-irmaos-qua', title: 'Harmonia entre Irmãos', description: 'Brincar juntos e resolver conflitos com diálogo!', icon: '❤️', completed: false },
-                    { id: 'heitor-passear-molly-qua', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
+                    // REMOVIDA: { id: 'heitor-passear-molly-qua', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
                     { id: 'heitor-comida-molly-qua', title: 'Dar comida para Molly', description: 'Ajudar a alimentar a Molly com carinho!', icon: '🦴', completed: false },
                     { id: 'heitor-brinquedos-qua', title: 'Organizar os Brinquedos', description: 'Guardar todos os brinquedos no lugar certo!', icon: '🧸', completed: false }
                 ],
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { id: 'heitor-toalhas-roupas-qui', title: 'Toalhas e Roupas no Lugar', description: 'Guardar as roupas e as toalhas nos lugares certos!', icon: '🧺', completed: false },
                     { id: 'heitor-quarto-organizado-qui', title: 'Quarto Organizado', description: 'Deixar o quarto limpo e arrumado antes de dormir!', icon: '🛏️', completed: false },
                     { id: 'heitor-harmonia-irmaos-qui', title: 'Harmonia entre Irmãos', description: 'Brincar juntos e resolver conflitos com diálogo!', icon: '❤️', completed: false },
-                    { id: 'heitor-passear-molly-qui', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
+                    // REMOVIDA: { id: 'heitor-passear-molly-qui', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
                     { id: 'heitor-comida-molly-qui', title: 'Dar comida para Molly', description: 'Ajudar a alimentar a Molly com carinho!', icon: '🦴', completed: false },
                     { id: 'heitor-brinquedos-qui', title: 'Organizar os Brinquedos', description: 'Guardar todos os brinquedos no lugar certo!', icon: '🧸', completed: false }
                 ],
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { id: 'heitor-toalhas-roupas-sex', title: 'Toalhas e Roupas no Lugar', description: 'Guardar as roupas e as toalhas nos lugares certos!', icon: '🧺', completed: false },
                     { id: 'heitor-quarto-organizado-sex', title: 'Quarto Organizado', description: 'Deixar o quarto limpo e arrumado antes de dormir!', icon: '🛏️', completed: false },
                     { id: 'heitor-harmonia-irmaos-sex', title: 'Harmonia entre Irmãos', description: 'Brincar juntos e resolver conflitos com diálogo!', icon: '❤️', completed: false },
-                    { id: 'heitor-passear-molly-sex', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
+                    // REMOVIDA: { id: 'heitor-passear-molly-sex', title: 'Passear com a Molly', description: 'Levar a Molly para um divertido passeio!', icon: '🐕', completed: false },
                     { id: 'heitor-comida-molly-sex', title: 'Dar comida para Molly', description: 'Ajudar a alimentar a Molly com carinho!', icon: '🦴', completed: false },
                     { id: 'heitor-brinquedos-sex', title: 'Organizar os Brinquedos', description: 'Guardar todos os brinquedos no lugar certo!', icon: '🧸', completed: false }
                 ]
@@ -147,15 +147,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const importButton = document.querySelector('.import-button');
     const resetButton = document.querySelector('.reset-button');
     const redeemButton = document.querySelector('.redeem-button');
-    const weekResetButton = document.getElementById('weekResetButton'); // NOVO BOTÃO: Reiniciar Tarefas da Semana
+    const weekResetButton = document.getElementById('weekResetButton');
 
-    // Modal de Recompensas (Elementos serão criados no JS, mas definimos referências)
+    // Modal de Recompensas
     let rewardModal;
     let rewardModalContent;
     let rewardModalCloseBtn;
     let rewardListElement;
-    let redeemHistorySection; // NOVO: Seção do histórico de resgates
-    let redeemHistoryList; // NOVO: Lista do histórico de resgates
+
+    // Seleção dos elementos do Histórico de Resgates
+    const redeemHistorySection = document.querySelector('.history-card'); 
+    const redeemHistoryList = document.getElementById('redeemHistoryList'); 
 
     let currentChild = 'nicolas'; // Filho inicial
     let currentDay = 'segunda'; // Dia inicial
@@ -168,18 +170,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedState = localStorage.getItem('rewardsAppState');
         if (savedState) {
             const parsedState = JSON.parse(savedState);
-            // Mescla o estado salvo com os dados padrão para novas atividades/filhos/histórico
             for (const childKey in appData) {
                 if (parsedState[childKey]) {
                     appData[childKey].goldenStars = parsedState[childKey].goldenStars || 0;
-                    appData[childKey].redeemHistory = parsedState[childKey].redeemHistory || []; // Carrega histórico
+                    appData[childKey].redeemHistory = parsedState[childKey].redeemHistory || []; 
                     for (const dayKey in appData[childKey].activities) {
                         if (parsedState[childKey].activities[dayKey]) {
+                            // Filtra atividades que não existem mais nos dados padrão (como "Passear com a Molly" para Heitor)
                             appData[childKey].activities[dayKey] = appData[childKey].activities[dayKey].map(activity => {
                                 const savedActivity = parsedState[childKey].activities[dayKey].find(sa => sa.id === activity.id);
-                                // Garante que novas propriedades (como 'completed') sejam mantidas se não existirem
                                 return savedActivity ? { ...activity, ...savedActivity } : activity;
-                            });
+                            }).filter(activity => 
+                                // Garante que a atividade ainda existe na definição padrão para este filho/dia
+                                appData[childKey].activities[dayKey].some(a => a.id === activity.id)
+                            );
                         }
                     }
                 }
@@ -226,12 +230,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         updateProgressBar();
         updateGoldenStarsDisplay();
-        renderRedeemHistory(); // NOVO: Atualiza o histórico ao renderizar atividades
+        renderRedeemHistory();
     }
 
     function renderRedeemHistory() {
-        if (!redeemHistoryList) return; // Garante que o elemento existe
-        redeemHistoryList.innerHTML = ''; // Limpa o histórico anterior
+        if (!redeemHistoryList) {
+            console.error("Elemento 'redeemHistoryList' não encontrado no DOM.");
+            return; 
+        } 
+        redeemHistoryList.innerHTML = '';
         const history = appData[currentChild].redeemHistory;
 
         if (history.length === 0) {
@@ -241,26 +248,34 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Exibe os 5 últimos resgates
-        const recentHistory = history.slice(-5); // Pega os 5 últimos itens
+        const recentHistory = history.slice(-5);
         
-        recentHistory.reverse().forEach(item => { // Inverte para mostrar o mais recente primeiro
+        recentHistory.reverse().forEach(item => {
             const li = document.createElement('li');
+            const date = new Date(item.date);
+            const formattedDate = `${date.toLocaleDateString('pt-BR')} ${date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
+
             li.innerHTML = `
                 ${item.name} (${item.cost} ⭐) - 
-                <span class="history-date">${new Date(item.date).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' })}</span>
+                <span class="history-date">${formattedDate}</span>
             `;
             redeemHistoryList.appendChild(li);
         });
 
-        // Adiciona um botão "Ver Tudo" se houver mais de 5 itens (opcional)
         if (history.length > 5) {
             const li = document.createElement('li');
             const seeAllBtn = document.createElement('button');
             seeAllBtn.textContent = 'Ver histórico completo';
-            seeAllBtn.classList.add('action-button', 'small-button'); // Adicione classes para estilização
+            seeAllBtn.classList.add('action-button', 'small-button');
+            seeAllBtn.style.marginTop = '10px';
             seeAllBtn.addEventListener('click', () => {
-                alert('Funcionalidade de histórico completo a ser implementada! Por enquanto, veja no console.');
+                let fullHistoryText = `Histórico de Resgates de ${currentChild.charAt(0).toUpperCase() + currentChild.slice(1)}:\n\n`;
+                history.forEach(item => {
+                    const date = new Date(item.date);
+                    const formattedDate = `${date.toLocaleDateString('pt-BR')} ${date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
+                    fullHistoryText += `${item.name} (${item.cost} ⭐) - ${formattedDate}\n`;
+                });
+                alert(fullHistoryText);
                 console.log('Histórico Completo:', appData[currentChild].redeemHistory);
             });
             li.appendChild(seeAllBtn);
@@ -294,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (found) {
             saveAppState();
-            renderActivities(); // Rerenderiza para atualizar a UI e progresso/estrelas
+            renderActivities();
         }
     }
 
@@ -304,11 +319,11 @@ document.addEventListener('DOMContentLoaded', () => {
             appData[currentChild].redeemHistory.push({
                 name: reward.name,
                 cost: reward.cost,
-                date: new Date().toISOString() // Salva a data em formato ISO
+                date: new Date().toISOString()
             });
             saveAppState();
             updateGoldenStarsDisplay();
-            renderRedeemHistory(); // Atualiza o histórico
+            renderRedeemHistory();
             alert(`Parabéns, ${currentChild.charAt(0).toUpperCase() + currentChild.slice(1)}! Você resgatou "${reward.name}" por ${reward.cost} Estrelas Douradas!`);
             closeRewardModal();
         } else {
@@ -340,6 +355,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateGoldenStarsDisplay() {
         goldenStarsSpan.textContent = appData[currentChild].goldenStars;
+        if (rewardModal && rewardModal.style.display === 'flex') {
+            rewardModal.querySelector('#modalGoldenStars').textContent = appData[currentChild].goldenStars;
+            renderRewardList();
+        }
     }
 
     // ----------------------------------------------------
@@ -405,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         rewardModalCloseBtn.addEventListener('click', closeRewardModal);
         rewardModal.addEventListener('click', (e) => {
-            if (e.target === rewardModal) { // Fecha se clicar fora do conteúdo
+            if (e.target === rewardModal) {
                 closeRewardModal();
             }
         });
@@ -414,6 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderRewardList() {
+        if (!rewardListElement) return;
         rewardListElement.innerHTML = '';
         rewards.forEach(reward => {
             const li = document.createElement('li');
@@ -431,14 +451,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!rewardModal) {
             createRewardModal();
         }
-        rewardModal.style.display = 'flex'; // Exibe o modal
-        rewardModal.querySelector('#modalGoldenStars').textContent = appData[currentChild].goldenStars; // Atualiza estrelas no modal
-        renderRewardList(); // Re-renderiza a lista para atualizar botões disabled
+        rewardModal.style.display = 'flex';
+        updateGoldenStarsDisplay();
     }
 
     function closeRewardModal() {
         if (rewardModal) {
-            rewardModal.style.display = 'none'; // Esconde o modal
+            rewardModal.style.display = 'none';
         }
     }
 
@@ -498,16 +517,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    redeemButton.addEventListener('click', openRewardModal); // Abre o modal ao clicar no botão "Resgatar Recompensas"
+    redeemButton.addEventListener('click', openRewardModal);
 
-    // NOVO: Botão para Reiniciar Tarefas da Semana (apenas o status completed)
-    // Precisamos adicionar este botão no HTML ainda!
-    // Para testar, você pode comentar esta linha temporariamente ou adicioná-lo no HTML já.
-    // Adicionaremos no HTML e CSS a seguir.
-    // Por enquanto, vou "simular" que ele existe no HTML para que o JS não dê erro.
-    // No entanto, para ele ser funcional, o elemento precisa existir no HTML com o ID 'weekResetButton'.
-    // Vou adicioná-lo ao `footer-actions` do HTML.
-    // Vamos criar o elemento no final desta resposta para que você possa copiar e colar no HTML.
+    if (weekResetButton) {
+        weekResetButton.addEventListener('click', resetWeekTasks);
+    } else {
+        console.warn("Elemento com ID 'weekResetButton' não encontrado no DOM. O botão de reiniciar tarefas semanais não funcionará.");
+    }
 
     function resetWeekTasks() {
         if (confirm('Tem certeza que deseja REINICIAR AS TAREFAS da semana atual para o filho selecionado? O saldo de Estrelas Douradas será MANTIDO.')) {
@@ -517,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
             saveAppState();
-            renderActivities(); // Re-renderiza para mostrar as tarefas como incompletas
+            renderActivities();
             alert(`Tarefas da semana de ${currentChild.charAt(0).toUpperCase() + currentChild.slice(1)} foram reiniciadas!`);
         }
     }
@@ -530,6 +546,5 @@ document.addEventListener('DOMContentLoaded', () => {
     body.classList.add(`theme-${currentChild}`); 
     renderActivities(); 
     updateDayTabState(); 
-    // Certifica-se de que o estado do modal é fechado ao carregar
     closeRewardModal(); 
 });
