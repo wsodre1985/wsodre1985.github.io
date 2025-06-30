@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de Recompensas Diárias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Quadro de Recompensas Diárias</h1>
+            <p>Rotina de Férias Escolares</p>
+            <p class="saved-status">Progresso salvo automaticamente</p>
+        </header>
+
+        <nav class="child-tabs">
+            <button class="child-tab-button active" data-child="nicolas">Nicolas</button>
+            <button class="child-tab-button" data-child="heitor">Heitor</button>
+        </nav>
+        <nav class="day-tabs">
+            <button class="tab-button active" data-day="segunda">Segunda</button>
+            <button class="tab-button" data-day="terca">Terça</button>
+            <button class="tab-button" data-day="quarta">Quarta</button>
+            <button class="tab-button" data-day="quinta">Quinta</button>
+            <button class="tab-button" data-day="sexta">Sexta</button>
+        </nav>
+        <main class="main-content">
+            <h2 class="current-day-title" id="currentDayTitle">Segunda-feira</h2>
+            
+            <div class="activities-grid" id="activitiesGrid">
+                </div>
+
+            <div class="progress-card">
+                <h3>Progresso do Dia</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                </div>
+                <p><span id="completedTasks">0</span> de <span id="totalTasks">0</span> tarefas concluídas</p>
+                <p>Vamos começar o dia!</p>
+            </div>
+            <div class="rewards-card">
+                <h3>Minhas Estrelas Douradas</h3>
+                <p class="golden-stars-count">Você tem <span id="goldenStars">0</span> Estrelas Douradas!</p>
+                <button class="action-button redeem-button">Resgatar Recompensas</button>
+                <p class="redeem-info">Cada tarefa concluída vale uma Estrela Dourada!</p>
+            </div>
+            <div class="history-card">
+                <h3>Histórico de Resgates Recentes</h3>
+                <ul id="redeemHistoryList">
+                    </ul>
+            </div>
+            </main>
+
+        <footer class="footer-actions">
+            <button class="action-button export-button">Exportar Dados</button>
+            <button class="action-button import-button">Importar Dados</button>
+            <button class="action-button reset-button">Reiniciar TUDO</button>
+            <button class="action-button reset-week-button" id="weekResetButton">Reiniciar Tarefas da Semana</button>
+        </footer>
+        <p class="app-info">Férias Escolares Divertidas e Organizadas!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
